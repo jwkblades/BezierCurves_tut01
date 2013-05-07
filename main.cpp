@@ -17,7 +17,7 @@ Point bezier(std::vector<Point>& pts, double t){
 	Point p;
 	std::size_t len = pts.size();
 	for(std::size_t i = 0; i < len; i++){
-		p += pts[i] * choose(len, i) * pow(1 - t, len - i) * pow(t, i);
+		p += pts[i] * (choose(len - 1, i) * pow(1 - t, len - 1 - i) * pow(t, i));
 	}
 	return p;
 }
