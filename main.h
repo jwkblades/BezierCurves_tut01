@@ -4,6 +4,7 @@
 #include "Point.h"
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 Point bezier(std::vector<Point>& pts, double t);
 double factorial(double num);

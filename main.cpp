@@ -1,6 +1,18 @@
 #include "main.h"
 using namespace std;
 
+int main(void){
+	std::vector<Point> pts;
+	pts.push_back(Point(20, 20));
+	pts.push_back(Point(30, 0));
+	pts.push_back(Point(40, 40));
+	pts.push_back(Point(50, 20));
+	for(double t = 0; t <= 1; t += .01){
+		cout << bezier(pts, t) << endl;
+	}
+	return 0;
+}
+
 Point bezier(std::vector<Point>& pts, double t){
 	Point p;
 	std::size_t len = pts.size();

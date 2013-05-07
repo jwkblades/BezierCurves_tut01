@@ -92,6 +92,6 @@ Point Point::operator+=(double num){
 }
 
 std::ostream& operator<<(std::ostream& out, const Point& pt){
-	out << pt.x << "\t" << pt.y << std::endl;
+	out << pt.x << "\t" << pt.y;
 	return out;
 }
