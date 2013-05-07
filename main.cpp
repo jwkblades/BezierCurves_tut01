@@ -8,8 +8,9 @@ int main(void){
 	double iny;
 	int ptCount = 0;
 	int endPoint;
+	double deltaT;
 
-	cin >> ptCount;
+	cin >> ptCount >> deltaT;
 	for(int i = 0; i < ptCount; i++){
 		cin >> inx >> iny >> endPoint;
 		Point p(inx, iny);
@@ -29,7 +30,7 @@ int main(void){
 	
 
 	for(std::size_t i = 0; i < pts.size(); i++){
-		for(double t = 0; t <= 1; t += .1){
+		for(double t = 0; t <= 1; t += deltaT){
 			cout << bezier(pts[i], t) << endl;
 		}
 	}
