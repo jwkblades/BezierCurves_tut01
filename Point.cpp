@@ -17,6 +17,7 @@ Point::~Point(void){
 Point& Point::operator=(const Point& src){
 	x = src.x;
 	y = src.y;
+	return *this;
 }
 Point Point::operator*(const Point& alt){
 	Point p(x * alt.x, y * alt.y);
